@@ -1,11 +1,19 @@
 /* eslint-disable */
 
-// chakra imports
-import { Box, Flex, HStack, Text, useColorModeValue } from '@chakra-ui/react';
-import Link from 'next/link';
-import { IRoute } from 'types/navigation';
-import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { IRoute } from 'types/navigation';
+
+// chakra imports
+import {
+  Box,
+  Flex,
+  HStack,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 interface SidebarLinksProps {
   routes: IRoute[];
@@ -45,12 +53,18 @@ export function SidebarLinks(props: SidebarLinksProps) {
         return (
           <Link key={index} href={route.layout + route.path}>
             {route.icon ? (
-              <Box>
+              <Box
+                borderRadius={12}
+                bg={
+                  activeRoute(route.path.toLowerCase())
+                    ? '#f4f7fe'
+                    : 'transparent'
+                }>
                 <HStack
                   spacing={
                     activeRoute(route.path.toLowerCase()) ? '22px' : '26px'
                   }
-                  py="5px"
+                  py="8px"
                   ps="10px"
                 >
                   <Flex w="100%" alignItems="center" justifyContent="center">

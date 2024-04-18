@@ -1,3 +1,6 @@
+// Custom components
+import * as React from 'react';
+
 import {
   Avatar,
   Box,
@@ -21,8 +24,7 @@ import {
   SortingState,
   useReactTable,
 } from '@tanstack/react-table';
-// Custom components
-import * as React from 'react';
+
 // Assets
 
 type RowObj = {

@@ -1,30 +1,30 @@
 import React from 'react';
 
-// chakra imports
-import {
-  Box,
-  Flex,
-  Drawer,
-  DrawerBody,
-  Icon,
-  useColorModeValue,
-  DrawerOverlay,
-  useDisclosure,
-  DrawerContent,
-  DrawerCloseButton,
-} from '@chakra-ui/react';
-import Content from 'components/sidebar/components/Content';
 import {
   renderThumb,
   renderTrack,
   renderView,
 } from 'components/scrollbar/Scrollbar';
+import Content from 'components/sidebar/components/Content';
 import { Scrollbars } from 'react-custom-scrollbars-2';
-
 // Assets
 import { IoMenuOutline } from 'react-icons/io5';
 import { IRoute } from 'types/navigation';
 import { isWindowAvailable } from 'utils/navigation';
+
+// chakra imports
+import {
+  Box,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  Icon,
+  useColorModeValue,
+  useDisclosure,
+} from '@chakra-ui/react';
 
 interface SidebarResponsiveProps {
   routes: IRoute[];
@@ -52,7 +52,7 @@ function Sidebar(props: SidebarProps) {
       <Box
         bg={sidebarBg}
         transition={variantChange}
-        w="300px"
+        w="270px"
         h="100vh"
         m={sidebarMargins}
         minH="100%"
@@ -118,14 +118,13 @@ export function SidebarResponsive(props: SidebarResponsiveProps) {
             _hover={{ boxShadow: 'none' }}
           />
           <DrawerBody maxW="285px" px="0rem" pb="0">
-            {/* @ts-expect-error */}
             <Scrollbars
               autoHide
               renderTrackVertical={renderTrack}
               renderThumbVertical={renderThumb}
               renderView={renderView}
             >
-              <Content routes={routes} />
+              {/* <Content routes={routes} /> */}
             </Scrollbars>
           </DrawerBody>
         </DrawerContent>

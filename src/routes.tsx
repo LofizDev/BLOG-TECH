@@ -1,37 +1,26 @@
-import { Icon } from '@chakra-ui/react';
-import {
-  MdBarChart,
-  MdPerson,
-  MdHome,
-  MdLock,
-  MdOutlineShoppingCart,
-} from 'react-icons/md';
-
-// Admin Imports
-// import MainDashboard from './pages/admin/default';
-// import NFTMarketplace from './pages/admin/nft-marketplace';
-// import Profile from './pages/admin/profile';
-// import DataTables from './pages/admin/data-tables';
-// import RTL from './pages/rtl/rtl-default';
-
-// Auth Imports
-// import SignInCentered from './pages/auth/sign-in';
+import { BsRocketTakeoffFill } from 'react-icons/bs';
+import { FaBitcoin } from 'react-icons/fa';
+import { FaGamepad } from 'react-icons/fa6';
+import { GiLoveMystery } from 'react-icons/gi';
+import { GrMoney } from 'react-icons/gr';
 import { IRoute } from 'types/navigation';
+
+import { Icon } from '@chakra-ui/react';
 
 const routes: IRoute[] = [
   {
-    name: 'Main Dashboard',
+    name: 'Xu Hướng',
     layout: '/admin',
-    path: '/default',
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
+    path: '/trending',
+    icon: <Icon as={BsRocketTakeoffFill} width="20px" height="20px" color="inherit" />,
   },
   {
-    name: 'NFT Marketplace',
+    name: 'Công Nghệ',
     layout: '/admin',
-    path: '/nft-marketplace',
+    path: '/bitcoin',
     icon: (
       <Icon
-        as={MdOutlineShoppingCart}
+        as={FaBitcoin}
         width="20px"
         height="20px"
         color="inherit"
@@ -40,29 +29,24 @@ const routes: IRoute[] = [
     secondary: true,
   },
   {
-    name: 'Data Tables',
+    name: 'Kiếm Tiền Online',
     layout: '/admin',
-    icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
+    icon: <Icon as={GrMoney} width="20px" height="20px" color="inherit" />,
     path: '/data-tables',
   },
   {
-    name: 'Profile',
+    name: 'Thủ Thuật / Hack Game ',
     layout: '/admin',
     path: '/profile',
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
+    icon: <Icon as={FaGamepad} width="20px" height="20px" color="inherit" />,
   },
   {
-    name: 'Sign In',
-    layout: '/auth',
-    path: '/sign-in',
-    icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
+    name: 'Trãi Đời ',
+    layout: '/admin',
+    path: '/profile',
+    icon: <Icon as={GiLoveMystery} width="20px" height="20px" color="inherit" />,
   },
-  {
-    name: 'RTL Admin',
-    layout: '/rtl',
-    path: '/rtl-default',
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
-  },
+
 ];
 
 export default routes;

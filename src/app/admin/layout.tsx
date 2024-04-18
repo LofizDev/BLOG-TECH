@@ -1,23 +1,29 @@
 'use client';
-// Chakra imports
 import {
-  Portal,
-  Box,
-  useDisclosure,
-  useColorModeValue,
-} from '@chakra-ui/react';
+  PropsWithChildren,
+  useEffect,
+  useState,
+} from 'react';
+
 import Footer from 'components/footer/FooterAdmin';
 // Layout components
 import Navbar from 'components/navbar/NavbarAdmin';
 import Sidebar from 'components/sidebar/Sidebar';
 import { SidebarContext } from 'contexts/SidebarContext';
-import { PropsWithChildren, useEffect, useState } from 'react';
 import routes from 'routes';
 import {
   getActiveNavbar,
   getActiveNavbarText,
   getActiveRoute,
 } from 'utils/navigation';
+
+// Chakra imports
+import {
+  Box,
+  Portal,
+  useColorModeValue,
+  useDisclosure,
+} from '@chakra-ui/react';
 
 interface DashboardLayoutProps extends PropsWithChildren {
   [x: string]: any;

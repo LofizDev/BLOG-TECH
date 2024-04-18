@@ -1,3 +1,11 @@
+import {
+  useEffect,
+  useState,
+} from 'react';
+
+import AdminNavbarLinks from 'components/navbar/NavbarLinksAdmin';
+import { isWindowAvailable } from 'utils/navigation';
+
 /* eslint-disable */
 // Chakra Imports
 import {
@@ -7,14 +15,10 @@ import {
   BreadcrumbLink,
   Flex,
   Link,
-  Text,
-  useColorModeValue
-} from '@chakra-ui/react'
-import { useState, useEffect } from 'react'
-import AdminNavbarLinks from 'components/navbar/NavbarLinksAdmin'
-import { isWindowAvailable } from 'utils/navigation'
+  useColorModeValue,
+} from '@chakra-ui/react';
 
-export default function AdminNavbar (props: {
+export default function AdminNavbar(props: {
   secondary: boolean
   message: string | boolean
   brandText: string
@@ -154,7 +158,7 @@ export default function AdminNavbar (props: {
             fixed={props.fixed}
           />
         </Box>
-      </Flex> 
+      </Flex>
     </Box>
   )
 }
